@@ -7,7 +7,7 @@ const Pricing = () => {
         <>
         <div className="pricingwrapper">
             <div className="pricing">
-                <h1>CookFood Pricing</h1>
+                <h1 className="pt-12">CookFood Pricing</h1>
                 <table>
                     <thead>
                     <tr>

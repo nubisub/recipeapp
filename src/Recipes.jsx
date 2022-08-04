@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-
+import Footer from "./Footer.jsx";
 const data = {
     "recipes": [
         {
@@ -2408,7 +2408,7 @@ const Recipes = () => {
                 "User-Agent": "Thunder Client (https://www.thunderclient.com)"
             }
 
-            let response = await fetch("https://api.spoonacular.com/recipes/random?apiKey=635c0fdcac2d4ad19cad2a7a33360ff2&number=5", {
+            let response = await fetch("https://api.spoonacular.com/recipes/random?apiKey=635c0fdcac2d4ad19cad2a7a33360ff2&number=8", {
                 method: "GET",
                 headers: headersList
             });
@@ -2423,36 +2423,32 @@ const Recipes = () => {
 
         const d = new Date();
         const timeNow = d.getDay()
-        console.log(timeNow)
 
         let timePast = JSON.parse(localStorage.getItem('time'));
-        console.log(timePast)
         if(!timePast){
             localStorage.setItem('time', JSON.stringify(timeNow));
             getRandom();
-            console.log("1")
         } else{
             if (timePast != timeNow){
                 getRandom()
                 localStorage.setItem('time', JSON.stringify(timeNow));
-                console.log("2")
             }
-            console.log("3")
             setRandom(JSON.parse(localStorage.getItem('items')));
         }
     },[])
 
     return (
-        <div className="px-24 pt-8 ">
+        <>
+        <div className="sm:px-24 px-4 pt-8 bg-[#F3F3F3] pb-12 ">
             <h1 className="my-2 font-bold text-2xl" >Today's Recipe</h1>
             <div className="flex flex-wrap justify-between" >
             {
                 random.map((recipe)=>{
                     return(
                     <>
-                        <a key={recipe.title} className="w-[250px] bg-[#03B473] text-white drop-shadow-md hover:drop-shadow-xl my-4 border-[1.5px] border-solid flex-wrap border-[#e0e0e0] rounded-xl" href="#"
+                        <a key={recipe.title} className="sm:max-w-[265px] w-[265px] max-w-[170px] bg-[#fefefe] text-white drop-shadow-md hover:drop-shadow-xl my-4 border-[1.5px] border-solid flex-wrap border-[#e0e0e0] rounded-sm justify-center" href="#"
                         >
-                            <div ler={recipe.title}  className="h-[250px] m-0 rounded-t-lg m-0.5"
+                            <div ler={recipe.title}  className="sm:h-[250px] h-[150px] m-0 rounded-t-sm"
                                 style={{
                                     backgroundImage: `url("${recipe.image}")`,
 
@@ -2461,7 +2457,7 @@ const Recipes = () => {
                                     backgroundSize: "cover"
                                 }}
                             ></div>
-                            <h2 tit={recipe.title}   className="w-full text-center my-2 px-4" >{recipe.title}</h2>
+                            <h2 tit={recipe.title}   className="w-full h-fit text-center my-2 px-4 text-black " >{recipe.title}</h2>
                         </a>
                     </>
                     )
@@ -2469,6 +2465,8 @@ const Recipes = () => {
             }
             </div>
         </div>
+            <Footer/>
+        </>
     )
 
 };

@@ -1,4 +1,15 @@
+import {useEffect, useState} from "react";
+
 const Footer = () => {
+    const [year, setYear] = useState()
+    useEffect(()=>{
+        const d = new Date();
+        let day = d.getFullYear();
+        setYear(day)
+        },[]
+    )
+
+
     return(
         <footer id="footer">
             <div className="footerwrapper">
@@ -6,7 +17,7 @@ const Footer = () => {
                     <div className="about">
                         <ul>
                             <li>
-                                <h1>CookFood</h1>
+                                <h1 className="text-3xl font-bold" >CookFood</h1>
                             </li>
                             <li>
                                 <p>
@@ -18,46 +29,46 @@ const Footer = () => {
                     </div>
                     <div>
                         <ul>
-                            <li><a href="#footer">About</a></li>
-                            <li><a href="#footer">About Us</a></li>
-                            <li><a href="#footer">Receip</a></li>
-                            <li><a href="#footer">Download</a></li>
-                            <li><a href="#footer">Contact</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Receip</a></li>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
                     <div>
                         <ul>
-                            <li><a href="#footer">Company</a></li>
-                            <li><a href="#footer">Our Receip</a></li>
-                            <li><a href="#footer">Subscribe Us</a></li>
-                            <li><a href="#footer">FAQ</a></li>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Our Receip</a></li>
+                            <li><a href="#">Subscribe Us</a></li>
+                            <li><a href="#">FAQ</a></li>
                         </ul>
                     </div>
                     <div>
                         <ul>
-                            <li><a href="#footer">Support</a></li>
-                            <li><a href="#footer">Account</a></li>
-                            <li><a href="#footer">Support Center</a></li>
-                            <li><a href="#footer">Feedback</a></li>
-                            <li><a href="#footer">Accecibility</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Account</a></li>
+                            <li><a href="#">Support Center</a></li>
+                            <li><a href="#">Feedback</a></li>
+                            <li><a href="#">Accecibility</a></li>
                         </ul>
                     </div>
                     <div>
                         <ul>
-                            <li><a href="#footer">Community</a></li>
-                            <li><a href="#footer">Discuss With Us</a></li>
-                            <li><a href="#footer">Forum</a></li>
-                            <li><a href="#footer">Blog</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Discuss With Us</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Blog</a></li>
                         </ul>
                     </div>
                 </div>
                 <hr />
                 <div className="down">
-                    <p>&#169; 2022 FoodCook,Inc &#183; All right reserved.</p>
+                    <p>&#169; {year} FoodCook,Inc &#183; All right reserved.</p>
                     <div className="tengah">
-                        <a href="#footer">Privacy</a>
-                        <a href="#footer">Terms</a>
-                        <a href="#footer">Cookies</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Cookies</a>
                     </div>
                     <div className="social">
                         <a href="#">

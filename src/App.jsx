@@ -5,6 +5,7 @@ import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom";
 import Pricing from "./Pricing.jsx";
 import Recipes from "./Recipes.jsx";
 import Home from "./Home.jsx";
+import Detail from "./Detail.jsx";
 
 
 
@@ -18,6 +19,7 @@ function App() {
                   <Route index element={<Home />} />
                   <Route path="Recipes" element={<Recipes />} />
                   <Route path="Pricing" element={<Pricing />} />
+                  <Route path="detail" element={<Detail />} />
               </Route>
           </Routes>
       </HashRouter>

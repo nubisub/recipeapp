@@ -44,7 +44,7 @@ const Secmain = () => {
     return(
         <div className="secmain">
             <div className="wilayah">
-                <h1>Inspiration for your next dish</h1>
+                <h1 className="text-2xl mb-4" >Inspiration for your next dish</h1>
                 <div className="wrapper">
                     <div className="clash-card cardminang">
                         <div className="bg minang"></div>
