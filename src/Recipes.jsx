@@ -2394,21 +2394,13 @@ const Recipes = () => {
 
     useEffect(() => {
 
-
-
-
-
-
-
-
-
         const getRandom = async () => {
             let headersList = {
                 "Accept": "*/*",
                 "User-Agent": "Thunder Client (https://www.thunderclient.com)"
             }
 
-            let response = await fetch("https://api.spoonacular.com/recipes/random?apiKey=635c0fdcac2d4ad19cad2a7a33360ff2&number=8", {
+            let response = await fetch("https://api.spoonacular.com/recipes/random?apiKey=f39c10627434495fab479beaa29e6be1&number=8", {
                 method: "GET",
                 headers: headersList
             });
@@ -2439,14 +2431,14 @@ const Recipes = () => {
 
     return (
         <>
-        <div className="sm:px-24 px-4 pt-8 bg-[#F3F3F3] pb-12 ">
+        <div className="sm:px-24 px-8 pt-8 bg-[#F3F3F3] pb-12 ">
             <h1 className="my-2 font-bold text-2xl" >Today's Recipe</h1>
             <div className="flex flex-wrap justify-between" >
             {
                 random.map((recipe)=>{
                     return(
                     <>
-                        <a key={recipe.title} className="sm:max-w-[265px] w-[265px] max-w-[170px] bg-[#fefefe] text-white drop-shadow-md hover:drop-shadow-xl my-4 border-[1.5px] border-solid flex-wrap border-[#e0e0e0] rounded-sm justify-center" href="#"
+                        <a key={recipe.title} className="sm:max-w-[265px] w-[265px] max-w-[180px] bg-[#fefefe] text-white drop-shadow-md hover:drop-shadow-xl my-4 border-[1.5px] border-solid flex-wrap border-[#e0e0e0] rounded-sm justify-center" href={"#/detail/"+recipe.id}
                         >
                             <div ler={recipe.title}  className="sm:h-[250px] h-[150px] m-0 rounded-t-sm"
                                 style={{

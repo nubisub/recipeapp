@@ -19,7 +19,7 @@ function App() {
                   <Route index element={<Home />} />
                   <Route path="Recipes" element={<Recipes />} />
                   <Route path="Pricing" element={<Pricing />} />
-                  <Route path="detail" element={<Detail />} />
+                  <Route path="detail/:id" element={<Detail />} />
               </Route>
           </Routes>
       </HashRouter>
