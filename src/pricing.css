@@ -971,3 +971,6 @@ button .apple {
     margin-right: 5px;
     animation: none;
 }
+#navbar{
+    position: initial;
+}
