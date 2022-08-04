@@ -2388,9 +2388,20 @@ const data = {
 
 const Recipes = () => {
     const [random, setRandom] = useState([])
-    const [isBusy, setBusy] = useState(true)
+
+
+
 
     useEffect(() => {
+
+
+
+
+
+
+
+
+
         const getRandom = async () => {
             let headersList = {
                 "Accept": "*/*",
@@ -2402,10 +2413,33 @@ const Recipes = () => {
                 headers: headersList
             });
 
+
+
             const json1 = await response.json()
             setRandom(json1.recipes)
+            localStorage.setItem('items', JSON.stringify(json1.recipes));
         }
-        getRandom()
+
+
+        const d = new Date();
+        const timeNow = d.getDay()
+        console.log(timeNow)
+
+        let timePast = JSON.parse(localStorage.getItem('time'));
+        console.log(timePast)
+        if(!timePast){
+            localStorage.setItem('time', JSON.stringify(timeNow));
+            getRandom();
+            console.log("1")
+        } else{
+            if (timePast != timeNow){
+                getRandom()
+                localStorage.setItem('time', JSON.stringify(timeNow));
+                console.log("2")
+            }
+            console.log("3")
+            setRandom(JSON.parse(localStorage.getItem('items')));
+        }
     },[])
 
     return (
@@ -2416,9 +2450,9 @@ const Recipes = () => {
                 random.map((recipe)=>{
                     return(
                     <>
-                        <a key={random.title} className="w-[250px] bg-[#03B473] text-white drop-shadow-md hover:drop-shadow-xl my-4 border-[.7px] border-solid flex-wrap border-[#e0e0e0] rounded-xl" href="#"
+                        <a key={recipe.title} className="w-[250px] bg-[#03B473] text-white drop-shadow-md hover:drop-shadow-xl my-4 border-[1.5px] border-solid flex-wrap border-[#e0e0e0] rounded-xl" href="#"
                         >
-                            <div className="h-[250px] m-0 rounded-t-lg m-0.5"
+                            <div ler={recipe.title}  className="h-[250px] m-0 rounded-t-lg m-0.5"
                                 style={{
                                     backgroundImage: `url("${recipe.image}")`,
 
@@ -2427,7 +2461,7 @@ const Recipes = () => {
                                     backgroundSize: "cover"
                                 }}
                             ></div>
-                            <h2 className="w-full text-center my-2 px-2" >{recipe.title}</h2>
+                            <h2 tit={recipe.title}   className="w-full text-center my-2 px-4" >{recipe.title}</h2>
                         </a>
                     </>
                     )
