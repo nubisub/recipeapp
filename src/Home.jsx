@@ -45,7 +45,7 @@ const Secmain = () => {
     return(
         <div className="secmain">
             <div className="wilayah">
-                <h1 className="text-2xl mb-4" >Inspiration for your next dish</h1>
+                <h1 className="sm:text-2xl text-xl mb-4 mt-0 sm:text-left text-center" >Inspiration for your next dish</h1>
                 <div className="wrapper">
                     <a href="#/search/minang" className="clash-card cardminang">
                         <div className="bg minang"></div>

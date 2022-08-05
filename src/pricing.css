@@ -88,7 +88,6 @@ body {
     width: 100%;
     display: flex;
     top: 0;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     z-index: 99;
@@ -113,7 +112,6 @@ body {
     align-items: center;
     padding-left: 0;
     margin: 0;
-    flex-wrap: wrap
 }
 
 .menu ul li {

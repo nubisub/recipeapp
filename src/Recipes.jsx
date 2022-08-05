@@ -75,7 +75,7 @@ const Recipes = () => {
                 random.map((recipe)=>{
                     return(
                     <>
-                        <a key={recipe.title} className="sm:max-w-[265px] w-[265px] max-w-[180px] bg-[#fefefe] text-white drop-shadow-md hover:drop-shadow-xl my-4 border-[1.5px] border-solid flex-wrap border-[#e0e0e0] rounded-sm justify-center" href={"#/detail/"+recipe.id}
+                        <a key={recipe.title} className="sm:max-w-[265px] w-[265px] max-w-[150px] bg-[#fefefe] text-white drop-shadow-md hover:drop-shadow-xl my-4 border-[1.5px] border-solid flex-wrap border-[#e0e0e0] rounded-sm justify-center" href={"#/detail/"+recipe.id}
                         >
                             <div ler={recipe.title}  className="sm:h-[250px] h-[150px] m-0 rounded-t-sm"
                                 style={{
@@ -86,7 +86,7 @@ const Recipes = () => {
                                     backgroundSize: "cover"
                                 }}
                             ></div>
-                            <h2 tit={recipe.title}   className="w-full h-fit text-center my-2 px-4 text-black " >{recipe.title}</h2>
+                            <h2 tit={recipe.title}   className="w-full h-fit text-center my-2 px-4 text-black text-xs sm:text-base " >{recipe.title}</h2>
                         </a>
                     </>
                     )
