@@ -682,7 +682,8 @@ main {
   max-width: 1366px;
   margin: 0 auto;
   padding: 1em 100px;
-  padding-bottom: 0
+  padding-bottom: 0;
+  padding-top:50px;
 }
 
 .footer {
@@ -1122,9 +1123,8 @@ button .apple {
     padding:20px;
   }
   .wilayah{
-    padding: 1px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding:20px;
+    padding-top:2px;
 
   }
   .wrapper{

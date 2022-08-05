@@ -18,7 +18,7 @@ const SearchBar = (props) => {
         }
     }
     return(
-    <div className="flex justify-center my-8">
+    <div className="flex justify-center my-4 sm:my-8 mb-8">
         <form className="flex justify-center items-center w-[500px] p-0"  onSubmit={handleSubmit}>
             <TextField sx={{width:'100%', borderRadius:100}}
                        color="success"
