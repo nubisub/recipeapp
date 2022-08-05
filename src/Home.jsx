@@ -47,32 +47,32 @@ const Secmain = () => {
             <div className="wilayah">
                 <h1 className="text-2xl mb-4" >Inspiration for your next dish</h1>
                 <div className="wrapper">
-                    <div className="clash-card cardminang">
+                    <a href="#/search/minang" className="clash-card cardminang">
                         <div className="bg minang"></div>
                         <h2 className="judulmasak">Minang</h2>
                         <p className="isimasak">
                             Rendang, Balado, Sate Padang, Soto Padang, Lamang
                         </p>
-                    </div>
-                    <div  className="clash-card cardjava">
+                    </a>
+                    <a href="#/search/java" className="clash-card cardjava">
                         <div className="bg java"></div>
                         <h2 className="judulmasak">Jawa</h2>
                         <p className="isimasak">
                             Rawon, Pecel, Gudeg, Surabi, Seblak, Tahu Tek, Garang Asem
                         </p>
-                    </div>
-                    <div  className="clash-card cardhealthy">
+                    </a>
+                    <a href="#/search/healthy" className="clash-card cardhealthy">
                         <div className="bg healthy"></div>
                         <h2 className="judulmasak">Healthy</h2>
                         <p className="isimasak">We don't do that here</p>
-                    </div>
-                    <div  className="clash-card cardchinese">
+                    </a>
+                    <a href="#/search/chinese" className="clash-card cardchinese">
                         <div className="bg chinese"></div>
                         <h2 className="judulmasak">Chinese</h2>
                         <p className="isimasak">
                             Fuyunghai, Dim Sum, Bebek Peking, Yu Seng, Lun Pia
                         </p>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
