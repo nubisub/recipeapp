@@ -4,6 +4,7 @@ import Home from "./Home.jsx";
 import Recipes from "./Recipes.jsx";
 import Pricing from "./Pricing.jsx";
 import Detail from "./Detail.jsx";
+import Search from "./Search.jsx";
 import {AnimatePresence} from "framer-motion";
 
 const AnimatedRouted = () => {
@@ -11,11 +12,12 @@ const AnimatedRouted = () => {
     return(
         <AnimatePresence>
             <Routes>
-                <Route location={location} key={location.pathname}>
+                <Route path="/" element={<Navbar />}>
                     <Route index element={<Home />} />
                     <Route path="Recipes" element={<Recipes />} />
                     <Route path="Pricing" element={<Pricing />} />
-                    <Route path="detail/:id  " element={<Detail />} />
+                    <Route path="detail/:id" element={<Detail />} />
+                    <Route path="search/:id" element={<Search />} />
                 </Route>
             </Routes>
         </AnimatePresence>

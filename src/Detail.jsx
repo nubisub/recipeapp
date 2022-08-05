@@ -12,7 +12,7 @@ const Detail = ()=>{
                 "Accept": "*/*",
                 "User-Agent": "Thunder Client (https://www.thunderclient.com)"
             }
-            let response = await fetch("https://api.spoonacular.com/recipes/"+id+"/information?apiKey=f39c10627434495fab479beaa29e6be1", {
+            let response = await fetch("https://api.spoonacular.com/recipes/"+id+"/information?apiKey=635c0fdcac2d4ad19cad2a7a33360ff2", {
                 method: "GET",
                 headers: headersList
             });

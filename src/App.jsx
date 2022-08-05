@@ -15,7 +15,6 @@ function App() {
 
   return (
       <HashRouter>
-        <Navbar/>
         <AnimatedRouted/>
       </HashRouter>
   )

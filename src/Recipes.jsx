@@ -1,6 +1,11 @@
 import {useEffect, useState} from "react";
 import Footer from "./Footer.jsx";
 import {motion} from "framer-motion"
+import {TextField} from "@mui/material";
+import {faCheck, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import SearchBar from "./SearchBar.jsx";
+
 
 const Recipes = () => {
     const [random, setRandom] = useState([])
@@ -45,15 +50,18 @@ const Recipes = () => {
         }
     },[])
 
+
+
     return (
         <motion.div
-
-
         >
         <div
 
 
             className="sm:px-24 px-8 pt-8 bg-[#F3F3F3] pb-12 ">
+
+            <SearchBar/>
+
             <h1 className="my-2 font-bold text-2xl" >Today's Recipe</h1>
             <motion.div
                 initial={{ opacity: 0, scale: 0.6 }}
