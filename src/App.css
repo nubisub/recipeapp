@@ -1114,6 +1114,7 @@ button .apple {
   }
   .desc h1{
     text-align: center;
+    padding: 0 50px;
   }
   main{
     display: flex;
@@ -1128,6 +1129,8 @@ button .apple {
   }
   .wrapper{
     flex-wrap: wrap;
+    padding: 0;
+    justify-content: space-between;
   }
   .clash-card{
     width: 100px;
@@ -1140,6 +1143,7 @@ button .apple {
   }
   .footer > div:first-child {
     width: 100%;
+    margin-bottom: 30px;
   }
   .footer > div {
     width: 50%;
@@ -1147,7 +1151,7 @@ button .apple {
   }
   .footer p {
     text-align:center ;
-    padding:0 20px;
+    padding:0 40px;
   }
   .footer{
     justify-content: space-around;
@@ -1166,7 +1170,7 @@ button .apple {
   .footer  div > ul > li{
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
   .landing .content h1 {
     margin:0;
@@ -1184,12 +1188,12 @@ button .apple {
   }
   .wrapper a{
     margin: 0;
-    width: 170px;
+    width: 48%;
     height:230px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .wrapper{
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .isimasak{
     display: none;
@@ -1210,6 +1214,9 @@ button .apple {
   }
   .desc{
     height: auto;
+  }
+  .soc, .tengah a{
+    margin: 2px 15px;
   }
 
 btn-main > a {
@@ -1241,7 +1248,9 @@ table *{
   .desc p {
     font-size: .8em;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
+    padding: 0 70px;
+    margin-bottom: 25px;
   }
   .desc br{
     display: none;

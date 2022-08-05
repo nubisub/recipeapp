@@ -26,14 +26,14 @@ const Detail = ()=>{
     return(
         <>
         <div className="sm:p-12 sm:px-24 p-4">
-            <h1 className="text-center font-medium text-2xl sm:mb-12 mb-4 " >{recipe.title}</h1>
+            <h1 className="text-center font-medium text-2xl sm:mb-12 sm:my-0 my-6 " >{recipe.title}</h1>
             <div className="flex justify-center items-center flex-col sm:flex-row ">
-            <img className="sm:mr-20 mr-0 rounded-sm shadow-lg sm:mb-0 mb-8 " src={recipe.image} alt=""/>
+            <img className="sm:mr-20 mr-0 rounded-sm shadow-lg sm:mb-0 mb-8 max-w-[95%] " src={recipe.image} alt=""/>
                 <ul className="list-disc list-inside">
             {
                 recipe.extendedIngredients?.map((res)=>{
                     return(
-                        <li><b>{res.amount}</b> <b>{res.unit}</b> {res.name}</li>
+                        <li className="my-2" ><b>{res.amount}</b> <b>{res.unit}</b> {res.name}</li>
                     )
                     }
                 )

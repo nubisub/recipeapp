@@ -33,7 +33,7 @@ const Search = () => {
 
 
     return(
-        <div  className="sm:px-24 px-8 pt-8 bg-[#F3F3F3] pb-12 ">
+        <div  className="sm:px-24 px-4 bg-[#F3F3F3] pb-12 ">
             <SearchBar id={id} reload={true} />
             <h1 className="my-2 font-medium text-2xl" >Result for {id}</h1>
             <motion.div

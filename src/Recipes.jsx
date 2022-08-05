@@ -58,7 +58,7 @@ const Recipes = () => {
         <div
 
 
-            className="sm:px-24 px-8 pt-8 bg-[#F3F3F3] pb-12 ">
+            className="sm:px-24 px-4 bg-[#F3F3F3] pb-12 ">
 
             <SearchBar/>
 
