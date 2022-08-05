@@ -13,7 +13,6 @@ const Pricing = () => {
             exit={{ opacity: 0 }}
         >
         <div className="pricingwrapper"
-
         >
             <div className="pricing">
                 <h1 className="pt-12">CookFood Pricing</h1>
