@@ -2,6 +2,7 @@ import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import SearchBar from "./SearchBar.jsx";
 import {motion} from "framer-motion";
+import Footer from "./Footer.jsx";
 
 const Search = () => {
     let { id } = useParams();
@@ -33,7 +34,8 @@ const Search = () => {
 
 
     return(
-        <div  className="sm:px-24 px-4 bg-[#F3F3F3] pb-12 ">
+        <>
+        <div  className="sm:px-24 px-4 py-4 bg-[#F3F3F3] pb-12 ">
             <SearchBar id={id} reload={true} />
             <h1 className="my-2 font-medium text-2xl" >Result for {id}</h1>
             <motion.div
@@ -69,6 +71,8 @@ const Search = () => {
             }
         </motion.div>
         </div>
+            <Footer/>
+        </>
 
     )
 }
