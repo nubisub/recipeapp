@@ -1039,7 +1039,7 @@ button .apple {
 
 @media screen and (max-width: 500px) {
   .landing .content p {
-    display:none
+    /*display:none*/
   }
 
   .landing .content h1 {
@@ -1096,6 +1096,7 @@ button .apple {
   #navbar{
     padding-right: 10px;
     padding-left: 20px;
+    height: 8vh;
   }
   main .content{
     margin: 0;
@@ -1117,6 +1118,7 @@ button .apple {
   main{
     display: flex;
     align-content: center;
+    padding:20px;
   }
   .wilayah{
     padding: 1px;
@@ -1145,11 +1147,14 @@ button .apple {
   }
   .footer p {
     text-align:center ;
+    padding:0 20px;
   }
   .footer{
     justify-content: space-around;
     margin: 0;
     width: 100%;
+    margin-bottom: 20px;
+
   }
   .footer > div > ul {
     padding:0px;
@@ -1162,6 +1167,10 @@ button .apple {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
+  }
+  .landing .content h1 {
+    margin:0;
+    width:100%
   }
   .down{
     flex-wrap: wrap-reverse;
@@ -1196,6 +1205,11 @@ button .apple {
   .wilayah h1{
     margin-top: 30px;
     text-align: center;
+    width: 100%;
+    display: block;
+  }
+  .desc{
+    height: auto;
   }
 
 btn-main > a {
@@ -1219,6 +1233,21 @@ table *{
 }
   thead th:first-child, tr td:first-child{
     font-size: .8em;
+  }
+  main{
+    max-height: 100vh;
+    height: 92vh;
+  }
+  .desc p {
+    font-size: .8em;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .desc br{
+    display: none;
+  }
+  .btn-main{
+    margin-top: 10px;
   }
 }
 .wrapper{
