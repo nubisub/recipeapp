@@ -2,10 +2,19 @@ import './pricing.css'
 import Footer from "./Footer.jsx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'
+import {motion} from 'framer-motion';
+
+
 const Pricing = () => {
     return (
-        <>
-        <div className="pricingwrapper">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
+        <div className="pricingwrapper"
+
+        >
             <div className="pricing">
                 <h1 className="pt-12">CookFood Pricing</h1>
                 <table>
@@ -131,7 +140,7 @@ const Pricing = () => {
             </div>
         </div>
         <Footer/>
-        </>
+        </motion.div>
     )
 };
 export default Pricing;

@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import './App.css'
 import Footer from "./Footer.jsx";
+import {motion} from "framer-motion"
 
 import mySvg from '/images/social/fb.svg'
 const Main = () => {
@@ -82,11 +83,15 @@ const Secmain = () => {
 const Home = () => {
 
     return(
-        <>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <Main/>
             <Secmain/>
             <Footer/>
-        </>
+        </motion.div>
 
         )
 
