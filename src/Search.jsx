@@ -49,7 +49,7 @@ const Search = () => {
                     return (
                         <>
                             <a key={recipe.title}
-                               className="sm:max-w-[265px] w-[265px] max-w-[150px] bg-[#fefefe] text-white drop-shadow-md hover:drop-shadow-xl my-4 border-[1.5px] border-solid flex-wrap border-[#e0e0e0] rounded-sm justify-center"
+                               className="sm:max-w-[265px] w-[265px] max-w-[48%] bg-[#fefefe] text-white drop-shadow-md hover:drop-shadow-xl my-4 border-[1.5px] border-solid flex-wrap border-[#e0e0e0] rounded-sm justify-center"
                                href={"#/detail/" + recipe.id}
                             >
                                 <div ler={recipe.title} className="sm:h-[250px] h-[150px] m-0 rounded-t-sm"
