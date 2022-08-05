@@ -31,7 +31,7 @@ const SearchBar = (props) => {
                            'aria-label': 'search',
                        }}
             />
-            <button className="ml-[-56px] z-10 h-full w-[56px] "  type='submit' >
+            <button className="ml-[-58px] z-10 h-[90%] w-[56px] bg-[#f3f3f3] "  type='submit' >
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
         </form>
