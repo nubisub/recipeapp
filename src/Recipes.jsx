@@ -35,8 +35,8 @@ const Recipes = () => {
 
 
         const d = new Date();
-        const timeNow = d.getDay()
-
+        const timeNow = d.getDate()
+        console.log(timeNow)
         let timePast = JSON.parse(localStorage.getItem('time'));
         if(!timePast){
             localStorage.setItem('time', JSON.stringify(timeNow));

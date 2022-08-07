@@ -1,16 +1,25 @@
 {
-	"name": "Recipa App",
+	"name": "Recipe App",
 	"short_name": "Recipe App",
 	"start_url": "/",
 	"display": "standalone",
 	"background_color": "#ffffff",
 	"lang": "en",
 	"scope": "/",
+    "theme_color": "#ffffff",
+    "description": "A simple recipe app",
     "icons": [
-      {
-        "src": "/vite.svg",
-        "sizes": "192x192",
-        "type": "image/png"
-      }
-   ]
+        {
+            "src": "vite.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "vite.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+
+
 }
