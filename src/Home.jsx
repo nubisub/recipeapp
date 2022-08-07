@@ -3,7 +3,6 @@ import './App.css'
 import Footer from "./Footer.jsx";
 import {motion} from "framer-motion"
 
-import mySvg from '/images/social/fb.svg'
 const Main = () => {
     return(
     <main className="landing">
@@ -47,26 +46,26 @@ const Secmain = () => {
             <div className="wilayah">
                 <h1 className="sm:text-2xl text-xl mb-8 mt-0 sm:text-left text-center" >Inspiration for your next dish</h1>
                 <div className="wrapper">
-                    <a href="#/search/minang" className="clash-card cardminang">
+                    <a href="#/search/minang" className="clash-card cardminang drop-shadow-md hover:drop-shadow-xl transition-all duration-200">
                         <div className="bg minang"></div>
                         <h2 className="judulmasak">Minang</h2>
                         <p className="isimasak">
                             Rendang, Balado, Sate Padang, Soto Padang, Lamang
                         </p>
                     </a>
-                    <a href="#/search/java" className="clash-card cardjava">
+                    <a href="#/search/java" className="clash-card cardjava drop-shadow-md hover:drop-shadow-xl transition-all duration-200">
                         <div className="bg java"></div>
                         <h2 className="judulmasak">Jawa</h2>
                         <p className="isimasak">
                             Rawon, Pecel, Gudeg, Surabi, Seblak, Tahu Tek, Garang Asem
                         </p>
                     </a>
-                    <a href="#/search/healthy" className="clash-card cardhealthy">
+                    <a href="#/search/healthy" className="clash-card cardhealthy drop-shadow-md hover:drop-shadow-xl transition-all duration-200">
                         <div className="bg healthy"></div>
                         <h2 className="judulmasak">Healthy</h2>
                         <p className="isimasak">We don't do that here</p>
                     </a>
-                    <a href="#/search/chinese" className="clash-card cardchinese">
+                    <a href="#/search/chinese" className="clash-card cardchinese drop-shadow-md hover:drop-shadow-xl transition-all duration-200">
                         <div className="bg chinese"></div>
                         <h2 className="judulmasak">Chinese</h2>
                         <p className="isimasak">
@@ -92,12 +91,7 @@ const Home = () => {
             <Secmain/>
             <Footer/>
         </motion.div>
-
         )
-
-
 };
-
-
 
 export default Home;

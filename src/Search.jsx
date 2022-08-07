@@ -6,10 +6,8 @@ import Footer from "./Footer.jsx";
 
 const Search = () => {
     let { id } = useParams();
-
     const [data, setData] = useState([]);
     const [query, setQuery] = useState(id)
-
 
     useEffect(()=>{
         const getRandom = async () => {
@@ -17,21 +15,15 @@ const Search = () => {
                 "Accept": "*/*",
                 "User-Agent": "Thunder Client (https://www.thunderclient.com)"
             }
-            let response = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=635c0fdcac2d4ad19cad2a7a33360ff2&query="+id+"&number=8", {
+            let response = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey="+import.meta.env.VITE_API_KEY+"&query="+id+"&number=8", {
                 method: "GET",
                 headers: headersList
             });
-
             const json1 = await response.json()
             setData(json1.results)
         }
         getRandom()
     },[])
-
-
-
-
-
 
     return(
         <>
@@ -51,10 +43,10 @@ const Search = () => {
                     return (
                         <>
                             <a key={recipe.title}
-                               className="sm:max-w-[265px] w-[265px] max-w-[48%] bg-[#fefefe] text-white drop-shadow-md hover:drop-shadow-xl my-4 border-[1.5px] border-solid flex-wrap border-[#e0e0e0] rounded-sm justify-center"
+                               className="sm:max-w-[265px] w-[265px] max-w-[49%] bg-[#fefefe] transition-all duration-200 text-white drop-shadow-md hover:drop-shadow-xl my-2 border-[1.5px] border-solid flex-wrap border-[#e0e0e0] rounded-sm justify-center"
                                href={"#/detail/" + recipe.id}
                             >
-                                <div ler={recipe.title} className="sm:h-[250px] h-[150px] m-0 rounded-t-sm"
+                                <div ler={recipe.title} className="sm:h-[250px] h-[170px] m-0 rounded-t-sm"
                                      style={{
                                          backgroundImage: `url("${recipe.image}")`,
                                          backgroundPosition: "center",
@@ -73,7 +65,6 @@ const Search = () => {
         </div>
             <Footer/>
         </>
-
     )
 }
 export default Search

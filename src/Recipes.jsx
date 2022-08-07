@@ -1,42 +1,29 @@
 import {useEffect, useState} from "react";
 import Footer from "./Footer.jsx";
 import {motion} from "framer-motion"
-import {TextField} from "@mui/material";
-import {faCheck, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import SearchBar from "./SearchBar.jsx";
 
 
 const Recipes = () => {
     const [random, setRandom] = useState([])
 
-
-
-
     useEffect(() => {
-
         const getRandom = async () => {
             let headersList = {
                 "Accept": "*/*",
                 "User-Agent": "Thunder Client (https://www.thunderclient.com)"
             }
-
-            let response = await fetch("https://api.spoonacular.com/recipes/random?apiKey=f39c10627434495fab479beaa29e6be1&number=8", {
+            let response = await fetch("https://api.spoonacular.com/recipes/random?apiKey="+import.meta.env.VITE_API_KEY+"&number=8", {
                 method: "GET",
                 headers: headersList
             });
-
-
-
             const json1 = await response.json()
             setRandom(json1.recipes)
             localStorage.setItem('items', JSON.stringify(json1.recipes));
         }
 
-
         const d = new Date();
         const timeNow = d.getDate()
-        console.log(timeNow)
         let timePast = JSON.parse(localStorage.getItem('time'));
         if(!timePast){
             localStorage.setItem('time', JSON.stringify(timeNow));
@@ -50,18 +37,11 @@ const Recipes = () => {
         }
     },[])
 
-
-
     return (
-        <
-        >
+        <>
         <div
-
-
             className="sm:px-24 px-4 bg-[#F3F3F3] py-4 pb-8 sm:pb-12   ">
-
             <SearchBar/>
-
             <h1 className="my-2 font-bold text-2xl" >Today's Recipe</h1>
             <motion.div
                 initial={{ opacity: 0, scale: 0.6 }}
@@ -75,12 +55,11 @@ const Recipes = () => {
                 random.map((recipe)=>{
                     return(
                     <>
-                        <a key={recipe.title} className="sm:max-w-[265px] w-[265px] max-w-[48%] bg-[#fefefe] text-white drop-shadow-md hover:drop-shadow-xl my-4 border-[1.5px] border-solid flex-wrap border-[#e0e0e0] rounded-sm justify-center" href={"#/detail/"+recipe.id}
+                        <a key={recipe.title} className="sm:max-w-[265px] w-[265px] max-w-[49%] bg-[#fefefe] text-white drop-shadow-md transition-all duration-200 hover:drop-shadow-xl my-2 border-[1.5px] border-solid flex-wrap border-[#e0e0e0] rounded-sm justify-center" href={"#/detail/"+recipe.id}
                         >
-                            <div ler={recipe.title}  className="sm:h-[250px] h-[150px] m-0 rounded-t-sm"
+                            <div ler={recipe.title}  className="sm:h-[250px] h-[170px] m-0 rounded-t-sm"
                                 style={{
                                     backgroundImage: `url("${recipe.image}")`,
-
                                     backgroundPosition: "center",
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "cover"
@@ -97,6 +76,5 @@ const Recipes = () => {
             <Footer/>
         </>
     )
-
 };
 export default Recipes;

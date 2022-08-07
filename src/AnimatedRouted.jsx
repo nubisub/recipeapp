@@ -21,7 +21,6 @@ const AnimatedRouted = () => {
                 </Route>
             </Routes>
         </AnimatePresence>
-
     )
 }
 export default AnimatedRouted

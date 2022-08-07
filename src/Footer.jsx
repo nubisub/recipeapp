@@ -9,7 +9,6 @@ const Footer = () => {
         },[]
     )
 
-
     return(
         <footer id="footer">
             <div className="footerwrapper">
@@ -80,7 +79,6 @@ const Footer = () => {
                         </a>
                         <a href="#">
                             <img className="soc" src="/images/social/ig.svg" alt="asdf"/>
-
                         </a>
                         <a href="https://github.com/nubisub">
                             <img className="soc" src="/images/social/gh.svg" alt="asdf"/>
