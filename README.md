@@ -1,7 +1,7 @@
 
 <div align="center">
 
-# [Recipe App](https://recipeapp-eight.vercel.app/)
+# [Recipe App](https://recipeapp-omega.vercel.app/)
 
 
 
