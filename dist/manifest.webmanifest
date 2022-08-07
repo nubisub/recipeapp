@@ -1,16 +1,21 @@
 {
-	"name": "recipe",
-	"short_name": "recipe",
+	"name": "Recipe App",
+	"short_name": "Recipe App",
 	"start_url": "/",
 	"display": "standalone",
 	"background_color": "#ffffff",
 	"lang": "en",
 	"scope": "/",
     "theme_color": "#ffffff",
-    "description": "Recipe App",
+    "description": "A simple recipe app",
     "icons": [
         {
-            "src": "vite.png",
+            "src": "192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "512.png",
             "sizes": "512x512",
             "type": "image/png"
         }

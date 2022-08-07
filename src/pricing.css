@@ -972,3 +972,171 @@ button .apple {
 #navbar{
     position: initial;
 }
+
+@media  (max-width: 600px) {
+    #navbar{
+        padding-right: 10px;
+        padding-left: 20px;
+        height: 8vh;
+    }
+    main .content{
+        margin: 0;
+    }
+    #lightfood{
+        display: none;
+    }
+    .desc{
+        width: 100%;
+        max-width: 100%;
+    }
+    .btn-main{
+        display: flex;
+        justify-content: center;
+    }
+    .desc h1{
+        text-align: center;
+        padding: 0 50px;
+    }
+    main{
+        display: flex;
+        align-content: center;
+        padding:20px;
+    }
+    .wilayah{
+        padding:20px;
+        padding-top:2px;
+
+    }
+    .wrapper{
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: space-between;
+    }
+    .clash-card{
+        width: 100px;
+        border-radius: .3em;
+        border-width: 4px;
+        margin-bottom: 20px;
+    }
+    .footerwrapper{
+        padding: 0;
+        padding:20px;
+    }
+    .footer > div:first-child {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .footer > div {
+        width: 50%;
+        margin-top:20px
+    }
+    .footer p {
+        text-align:center ;
+        padding:0 40px;
+    }
+    .footer{
+        justify-content: space-around;
+        margin: 0;
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+    .footer > div > ul {
+        padding:0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+    }
+    .footer  div > ul > li{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6px;
+    }
+    .landing .content h1 {
+        margin:0;
+        width:100%
+    }
+    .down{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-content: center;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    .down > *{
+        margin-top: 15px;;
+    }
+    .wrapper a{
+        margin: 0;
+        width: 48%;
+        height:230px;
+        margin-bottom: 15px;
+    }
+    .wrapper{
+        justify-content: space-between;
+    }
+    .isimasak{
+        display: none;
+    }
+    .judulmasak{
+        text-align: center;
+    }
+    a > .bg {
+        height: 180px;
+        border-radius: .1em;
+
+    }
+    .wilayah h1{
+        margin-top: 30px;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    .desc{
+        height: auto;
+    }
+    .soc, .tengah a{
+        margin: 2px 15px;
+    }
+
+    btn-main > a {
+        /*03B473*/
+        background-color: #03B473;
+    }
+    .pricing h1 {
+        font-size: 2em;
+    }
+    table{
+        width:50px;
+        font-size: 1em;
+        display: none;
+    }
+    td{
+        width: 20px;
+        height: 20px;
+    }
+    table *{
+        font-size: 1em;
+    }
+    thead th:first-child, tr td:first-child{
+        font-size: .8em;
+    }
+    main{
+        max-height: 100vh;
+        height: 92vh;
+    }
+    .desc p {
+        font-size: .8em;
+        text-align: center;
+        margin-top: 20px;
+        padding: 0 70px;
+        margin-bottom: 25px;
+    }
+    .desc br{
+        display: none;
+    }
+    .btn-main{
+        margin-top: 10px;
+    }
+}

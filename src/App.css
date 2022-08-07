@@ -1138,6 +1138,7 @@ button .apple {
     margin-bottom: 20px;
   }
   .footerwrapper{
+    padding: 0;
     padding:20px;
   }
   .footer > div:first-child {
@@ -1258,6 +1259,7 @@ table *{
     margin-top: 10px;
   }
 }
+
 .wrapper{
   flex-wrap: wrap;
 }
